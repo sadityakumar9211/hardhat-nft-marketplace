@@ -4,6 +4,7 @@ pragma solidity ^0.8.7;
 
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "@openzeppelin/contracts/security/ReentrancyGuard.sol";
+import "hardhat/console.sol";
 
 error NftMarketplace__PriceMustBeAboveZero();
 error NftMarketplace__NotApprovedForMarketplace();
@@ -91,6 +92,11 @@ contract NftMarketplace is ReentrancyGuard {
     ///////////////////////
     //  Main Functions  //
     //////////////////////
+
+    constructor(){
+        console.log("NftMarketplace constructor");
+    }
+
     /*
      * @notice Method for listing NFT
      * @param nftAddress Address of NFT contract
