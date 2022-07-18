@@ -15,6 +15,8 @@ error NftMarketplace__PriceNotMet(
     uint256 tokenId,
     uint256 price
 );
+error NftMarketplace__NoProceeds();
+error NftMarketplace__WithdrawFailed();
 
 contract NftMarketplace is ReentrancyGuard {
     //Type Declarations
@@ -186,6 +188,40 @@ contract NftMarketplace is ReentrancyGuard {
         s_listings[nftAddress][tokenId].price = newPrice;
         emit ItemListed(msg.sender, nftAddress, tokenId, newPrice);
     }
+
+    function withdrawProceeds() external payable nonReentrant{
+        uint256 proceeds = s_proceeds[msg.sender];
+        if(proceeds <= 0){
+            revert NftMarketplace__NoProceeds();
+        }
+        s_proceeds[msg.sender] = 0;
+        (bool success, ) = payable(msg.sender).call{value: proceeds}("");
+        if(!success){
+            revert NftMarketplace__WithdrawFailed();
+        }
+    }
+
+    ///////////////////////////////
+    //     Getter Functions      //
+    ///////////////////////////////
+
+    function getListing(address nftAddress, uint256 tokenId)
+        external
+        view
+        returns (Listing memory listing)
+    {
+        return s_listings[nftAddress][tokenId];
+    }
+
+    function getProceeds(address seller)
+        external
+        view
+        returns (uint256)
+    {
+        return s_proceeds[seller];
+    }
+
+
 }
 
 /*
@@ -193,6 +229,6 @@ contract NftMarketplace is ReentrancyGuard {
     1. `listItem`: List NFTs on the marketplace ✅
     2. `buyItem`: Buy the NFTs✅ 
     3. `cancelItem`: Cancel a listing ✅
-    4. `updateListing`: Update Price
-    5. `withdrawProceeds`: Withdraw payment for my bought NFTs
+    4. `updateListing`: Update Price ✅
+    5. `withdrawProceeds`: Withdraw payment for my bought NFTs ✅
 */
