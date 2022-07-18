@@ -16,7 +16,7 @@ error NftMarketplace__PriceNotMet(
     uint256 price
 );
 
-contract NftMarketplace  is ReentrancyGuard {
+contract NftMarketplace is ReentrancyGuard {
     //Type Declarations
     struct Listing {
         uint256 price;
@@ -44,6 +44,11 @@ contract NftMarketplace  is ReentrancyGuard {
         uint256 price
     );
 
+    event ItemCancelled(
+        address indexed seller,
+        address indexed nftAddress,
+        uint256 indexed tokenId
+    );
     ///////////////////////
     //     Modifiers     //
     //////////////////////
@@ -141,7 +146,7 @@ contract NftMarketplace  is ReentrancyGuard {
                 listedItem.price
             );
         }
-        //we don't just send seller the money..?
+        //we  don't just send seller the money..?
         //Pull Over Push
         //Shift the risk associated with transferring ether to the user.
 
@@ -159,13 +164,22 @@ contract NftMarketplace  is ReentrancyGuard {
         );
         emit ItemBought(msg.sender, nftAddress, tokenId, listedItem.price);
     }
+
+    function cancelListing(address nftAddress, uint256 tokenId)
+        external
+        isOwner(nftAddress, tokenId, msg.sender)
+        isListed(nftAddress, tokenId)
+    {
+        delete (s_listings[nftAddress][tokenId]);
+        emit ItemCancelled(msg.sender, nftAddress, tokenId);
+    }
 }
 
 /*
 1. Create a decentralized NFT Marketplace
-    1. `listItem`: List NFTs on the marketplace
-    2. `buyItem`: Buy the NFTs
-    3. `cancelItem`: Cancel a listing
+    1. `listItem`: List NFTs on the marketplace ✅
+    2. `buyItem`: Buy the NFTs✅ 
+    3. `cancelItem`: Cancel a listing ✅
     4. `updateListing`: Update Price
     5. `withdrawProceeds`: Withdraw payment for my bought NFTs
 */
