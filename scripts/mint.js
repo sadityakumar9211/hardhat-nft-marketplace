@@ -1,4 +1,4 @@
-//mints and immediately lists the nft on the marketplace
+//mints the nft
 
 const { ethers } = require("hardhat")
 const {moveBlocks} = require("../utils/move-blocks")
