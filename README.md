@@ -26,6 +26,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
+  <img width="50" alt="image" src="https://user-images.githubusercontent.com/78147198/187678633-4a8567af-3b87-44b4-8e4f-0635b7329271.png">
 
   <h2 align="center">NFT Markeplace</h2>
 
@@ -79,7 +80,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img width="1278" alt="image" src="https://user-images.githubusercontent.com/78147198/184471278-42e393d0-db94-4577-bdc9-328510b777c0.png">
+<img width="1235" alt="image" src="https://user-images.githubusercontent.com/78147198/187677918-e74f07ca-9c31-4ac6-8cd4-eb59d015cc37.png">
+
 
 **Blockchain** developed the idea of NFTs and introduced digital ownership of certain assets. This is because tokens are not exchangeable which makes it possible to establish property ownership in digital art. 
 
