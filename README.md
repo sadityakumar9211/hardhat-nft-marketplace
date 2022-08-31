@@ -36,7 +36,7 @@
     <br /> 
     <a href="https://github.com/sadityakumar9211/nextjs-nft-marketpalce"><strong> <i>nextjs-nft-marketplace</i>: Frontend Repository of NFT Marketplace Project»</strong></a>
     <br>
-    <a href="https://github.com/sadityakumar9211/medichain-thegraph"><strong> <i>thegraph-nft-marketplace</i>: The Graph Repository of NFT Marketplace Project»</strong></a>
+    <a href="https://github.com/sadityakumar9211/thegraph-nft-marketplace"><strong> <i>thegraph-nft-marketplace</i>: The Graph Repository of NFT Marketplace Project»</strong></a>
     <br>
     <br />
     <br />
