@@ -27,16 +27,15 @@
 <br />
 <div align="center">
 
-  <h3 align="center">NFT Markeplace</h3>
+  <h2 align="center">NFT Markeplace</h2>
 
+  <h4>Buy NFTs · Sell NFTs · Widthdraw Proceeds</h4>
   <p align="center">
-    This repository is one of the three repositories which are part of MediChain Project.
-    <br />
-    <a href="https://drive.google.com/file/d/1yLMIXVaBYgb28V9uKAtgoDMZaAdw-8xo/view?usp=sharing" target="_blank"><strong>Explore the Final Project Report »</strong></a> 
+    This repository is one of the three repositories which are part of NFT Marketplace Project.
+    <br /> 
+    <a href="https://github.com/sadityakumar9211/nextjs-nft-marketpalce"><strong> <i>nextjs-nft-marketplace</i>: Frontend Repository of NFT Marketplace Project»</strong></a>
     <br>
-    <a href="https://github.com/sadityakumar9211/medichain-nextjs"><strong> <i>medichain-nextjs</i>: Frontend Repository of MediChain Project»</strong></a>
-    <br>
-    <a href="https://github.com/sadityakumar9211/medichain-thegraph"><strong> <i>medichain-thegraph</i>: The Graph Repository of MediChain Project»</strong></a>
+    <a href="https://github.com/sadityakumar9211/medichain-thegraph"><strong> <i>thegraph-nft-marketplace</i>: The Graph Repository of NFT Marketplace Project»</strong></a>
     <br>
     <br />
     <br />
@@ -82,12 +81,9 @@
 
 <img width="1278" alt="image" src="https://user-images.githubusercontent.com/78147198/184471278-42e393d0-db94-4577-bdc9-328510b777c0.png">
 
-**Blockchain** being an immutable ledger and with decentralized nature has a great potential for increasing the security, privacy and efficiency of Medical Health Record keeping systems. Currently existing solutions rely on centralised database which are susceptible to _Ransomware attacks, Denial of Service(DoS) attacks and also have significant counterparty risks._ Some decentralized solutions are also exist but some of them are not really decentralized that are based on private or permissioned blockchain, while some which are based on public blockchain have not properly addressed the performance and scalability issues. 
+**Blockchain** developed the idea of NFTs and introduced digital ownership of certain assets. This is because tokens are not exchangeable which makes it possible to establish property ownership in digital art. 
 
-The proposed system is based on EVM compatible public blockchains using IPFS as a decentralized file storage solution and uses 2048 bit RSA encryption to encrypt the IPFS HASH of file metadata on the client-side before uploading the HASH on the blockchain. For supporting fast and complex queries this system uses a decentralized indexing protocol *The Graph*. The smart contract is currently deployed on *Rinkeby Testnet*.
-
-With this system patients can access their medical records anytime anywhere without the counterparty risk from centralized entity. This system also features QR code for sharing of medical files from patients to doctors. With the proposed implementation the decentralized medical record keeping system provides increased security and privacy compared to centralized systems without loss of significant performance or scalability benefits.
-
+NFT marketplace is a digital platform to create and trade digital assets. There are several marketplaces to create, sell, buy and trade NFTs. This is one small implementation of such platforms. The platform can allow you to buy and sell NFTs. You can also withdraw funds which you earned after selling the NFTs. For supporting fast and complex queries this system uses a decentralized indexing protocol *The Graph*. The smart contract is currently deployed on *Rinkeby Testnet*.
 
 ### The links to other repositories of this project is at the top.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -154,7 +150,7 @@ If you can't or don't want to run and install locally, you can work with this re
 
 1. Setup environment variabltes
 
-You'll want to set your `RINKEBY_RPC_URL` and `OWNER_PRIVATE_KEY` as environment variables. You can add them to a `.env` file, similar to what you see in `.env.example`.
+You'll want to set your `RINKEBY_RPC_URL` and `PRIVATE_KEY` as environment variables. You can add them to a `.env` file, similar to what you see in `.env.example`.
 
 - `OWNER_PRIVATE_KEY`: The private key of your account (like from [metamask](https://metamask.io/)). **NOTE:** FOR DEVELOPMENT, PLEASE USE A KEY THAT DOESN'T HAVE ANY REAL FUNDS ASSOCIATED WITH IT.
   - You can [learn how to export it here](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key).
@@ -281,10 +277,10 @@ Project Link: [https://github.com/sadityakumar9211/hardhat-nft-marketplace](http
 
 
 
-
+<!-- 
 1. Create a decentralized NFT Marketplace
     1. `listItem`: List NFTs on the marketplace
     2. `buyItem`: Buy the NFTs
     3. `cancelItem`: Cancel a listing
     4. `updateListing`: Update Price
-    5. `withdrawProceeds`: Withdraw payment for my bought NFTs
+    5. `withdrawProceeds`: Withdraw payment for my bought NFTs -->
