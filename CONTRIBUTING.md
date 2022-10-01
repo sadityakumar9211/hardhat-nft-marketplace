@@ -1,7 +1,8 @@
-NFT Marketplace is a decentrailized web application where users can register, buy and sell NFTs. They can also withdraw funds of sold NFTs. We welcome you to contribute to our project in the form of solving issues, reporting issues, opening pull requests, or improving our documentation.
+NFT Marketplace is a decentrailized web application where users can register, buy and sell NFTs. They can also withdraw funds of sold NFTs.  
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated. You can to contribute to this project in the form of solving issues, reporting issues, opening pull requests, or improving project's documentation.
 
 ## Issues for new contributors
-While we welcome any form of contribution, we've marked a few issues which are particularly suited for new contributors. 
+While any form of contribution is welcome, I've marked a few issues which are particularly suited for new contributors. 
 These issues are marked with the `good first issue` label. Other issues are also marked according to their difficulty level.
 
 ## How to contribute
